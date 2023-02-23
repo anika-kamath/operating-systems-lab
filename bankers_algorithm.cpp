@@ -46,6 +46,15 @@ int main() {
             need[i][j] = max[i][j] - allocation[i][j];
         } 
     } 
+
+    cout<<"Need Matrix: "<<endl;
+    for(int i=0;i<n;i++){
+        cout<<endl;
+        for(int j=0;j<m;j++){
+            cout<<need[i][j]<<" ";
+        }
+    }
+
     
     int y = 0; 
     for (int k=0;k<5;k++) 
@@ -83,13 +92,13 @@ int main() {
         if(finish[i] == 0)
         { 
             flag = false; 
-            cout<<"System is in deadlock !!"; break; 
+            cout<<"\nSystem is in deadlock !!"; break; 
         }
     }
     
     if(flag==true)
     {
-        cout<<"System is in safe state and following is the safe sequence: ";
+        cout<<"\nSystem is in safe state and following is the safe sequence: ";
         for(int i=0;i<n-1;i++)
         {
             cout<<"P"<<ans[i]<<" -> "; 
